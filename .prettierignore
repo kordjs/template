@@ -1,0 +1,7 @@
+node_modules
+LICENSE
+package-lock.json
+.gitignore
+.npmignore
+README.md
+CHANGELOG.md

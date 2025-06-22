@@ -1,0 +1,8 @@
+CHANGELOG.md
+src
+.gitignore
+.prettierignore
+tests/
+tsup.config.ts
+tsconfig.json
+LICENSE
