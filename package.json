@@ -7,7 +7,7 @@
     "test": "vitest",
     "build": "tsup",
     "pretty": "prettier --write .",
-    "lint": "eslint -c ./eslint.config.ts . && prettier --check .",
+    "lint": "eslint -c ./eslint.config.mjs .",
     "prepare": "npm run pretty && npm run lint && npm run build",
     "dev": "tsup --watch",
     "dev:run": "tsup && clear && node tests/.node"
@@ -27,17 +27,13 @@
   },
   "homepage": "https://github.com/kordjs/template#readme",
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^8.34.1",
-    "@typescript-eslint/parser": "^8.34.1",
+    "@eslint/js": "^9.29.0",
     "eslint": "^9.29.0",
-    "eslint-config-prettier": "^10.1.5",
-    "eslint-define-config": "^2.1.0",
-    "eslint-plugin-prettier": "^5.5.0",
-    "jiti": "^2.4.2",
+    "globals": "^16.2.0",
     "prettier": "^3.5.3",
     "tsup": "^8.5.0",
     "typescript": "^5.8.3",
-    "typescript-eslint": "^8.34.1",
+    "typescript-eslint": "^8.35.0",
     "vitest": "^3.2.4"
   }
 }
