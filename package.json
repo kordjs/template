@@ -3,14 +3,18 @@
   "version": "1.0.1",
   "description": "Template Description",
   "main": "dist/index.js",
+  "exports": {
+    "types": "./dist/index.d.ts",
+    "import": "./dist/index.mjs",
+    "require": "./dist/index.js"
+  },
   "scripts": {
     "test": "vitest",
     "build": "tsup",
     "pretty": "prettier --write .",
     "lint": "eslint -c ./eslint.config.mjs .",
     "prepare": "npm run pretty && npm run lint && npm run build",
-    "dev": "tsup --watch",
-    "dev:run": "tsup && clear && node tests/.node"
+    "start": "tsup && clear && node tests/.node/index.js"
   },
   "repository": {
     "type": "git",
