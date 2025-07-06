@@ -1,8 +1,22 @@
-CHANGELOG.md
-src
-.gitignore
-.prettierignore
-tests/
-tsup.config.ts
-tsconfig.json
+# Else
 LICENSE
+.prettierignore
+.vscode/
+.github/
+
+# Config Files
+.prettierrc
+tsconfig.json
+tsup.config.json
+typedoc.json
+release-it.json
+eslint.config.mjs
+
+# Source
+src/
+docs/
+tests/
+
+# MarkDown
+CHANGELOG.md
+NOTES.md
