@@ -34,7 +34,7 @@ const run = async (opts: { template: string; yes: boolean; install: boolean; git
 
     const defaultAnswers = {
         projectDirInput: '.',
-        packageName: 'my-package',
+        packageName: '@org/name',
         description: 'This is my package.',
         author: ''
     };
@@ -45,25 +45,25 @@ const run = async (opts: { template: string; yes: boolean; install: boolean; git
               {
                   type: 'text',
                   name: 'projectDirInput',
-                  message: 'Where to create the project (e.g. "." for current directory)?',
+                  message: 'Where to create the project?',
                   initial: '.'
               },
               {
                   type: 'text',
                   name: 'packageName',
-                  message: 'Package name:',
+                  message: 'package.json() name:',
                   initial: 'my-package'
               },
               {
                   type: 'text',
                   name: 'description',
-                  message: 'Description:',
+                  message: 'package.json() description:',
                   initial: 'A KordJS powered project'
               },
               {
                   type: 'text',
                   name: 'author',
-                  message: 'Author:'
+                  message: 'package.json() author:'
               }
           ]);
 
@@ -77,7 +77,7 @@ const run = async (opts: { template: string; yes: boolean; install: boolean; git
             type: 'confirm',
             name: 'confirm',
             message: 'Generate project in the current directory?',
-            initial: false
+            initial: true
         });
         if (!confirm) process.exit(1);
     }
